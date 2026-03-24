@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Muneassh App Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: white;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 40px 0;
+            border-left: 3px solid var(--primary);
+        }
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -39px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+        .timeline-year {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo"><a href="index.html">Muneassh<span style="color: var(--primary);">.</span>Dev</a></div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="products/">Products</a>
+                    <a href="services/">Services</a>
+                    <a href="about.html" class="active">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="about-hero">
+        <div class="container">
+            <h1>About Me</h1>
+            <p>Passionate developer creating innovative solutions</p>
+        </div>
+    </div>
+
+    <div class="about-content">
+        <div class="profile-image">👨‍💻</div>
+        <h2 style="text-align: center;">Ahmed Suhaba</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 40px;">App Developer & IoT Enthusiast</p>
+        
+        <p style="font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
+            I'm a passionate app developer based in Addis Ababa, Ethiopia. I specialize in creating high-quality mobile applications using Flutter and developing IoT solutions that solve real-world problems.
+        </p>
+        
+        <h3>My Journey</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">2024 - Present</div>
+                <div><strong>Independent App Developer</strong> - Building and publishing apps on Google Play</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2023 - 2024</div>
+                <div><strong>Flutter Developer</strong> - Worked on cross-platform mobile applications</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2022 - 2023</div>
+                <div><strong>IoT Developer</strong> - Developed smart home automation systems</div>
+            </div>
+        </div>
+        
+        <h3>Skills & Expertise</h3>
+        <div class="skills" style="margin: 20px 0;">
+            <span class="skill">Flutter</span><span class="skill">Dart</span><span class="skill">Kotlin</span>
+            <span class="skill">Firebase</span><span class="skill">Arduino</span><span class="skill">ESP32</span>
+            <span class="skill">REST APIs</span><span class="skill">Git/GitHub</span><span class="skill">AdMob</span>
+        </div>
+        
+        <h3>My Mission</h3>
+        <p>To deliver exceptional software solutions that combine cutting-edge technology with intuitive user experiences, helping clients achieve their digital goals.</p>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info"><h3>Muneassh App Developer</h3><p>Turning Ideas into Powerful Apps</p></div>
+                <div class="footer-links"><h4>Quick Links</h4><a href="index.html">Home</a><a href="products/">Products</a><a href="services/">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+                <div class="footer-contact"><h4>Connect</h4><a href="https://github.com/muneassh">GitHub</a><a href="mailto:ahmedsuhaba@gmail.com">Email</a></div>
+            </div>
+            <div class="copyright"><p>© 2026 Muneassh App Developer | Addis Ababa, Ethiopia</p></div>
+        </div>
+    </footer>
+</body>
+</html>
