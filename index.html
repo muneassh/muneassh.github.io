@@ -15,26 +15,45 @@
     <meta property="og:url" content="https://muneassh.github.io">
     <meta property="og:image" content="https://muneassh.github.io/assets/images/og-image.png">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <!-- Google AdSense (REPLACE with your AdSense code when approved) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8891897633102231"
+     crossorigin="anonymous"></script>
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .ad-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 16px;
+        }
+        .ad-label {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .responsive-ad {
+            display: inline-block;
+            width: 100%;
+            max-width: 728px;
+            min-height: 90px;
+        }
+        @media (max-width: 768px) {
+            .responsive-ad { min-height: 250px; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="nav">
-                <div class="logo">
-                    <a href="index.html">Muneassh<span style="color: var(--primary);">.</span>Dev</a>
-                </div>
+                <div class="logo"><a href="index.html">Muneassh<span style="color: var(--primary);">.</span>Dev</a></div>
                 <div class="nav-links">
                     <a href="index.html" class="active">Home</a>
                     <a href="products/">Products</a>
@@ -46,7 +65,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>Turning Ideas into<br>Powerful Mobile & IoT Apps</h1>
@@ -58,205 +76,72 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
+    <!-- AdSense Banner -->
+    <div class="container">
+        <div class="ad-container">
+            <div class="ad-label">Advertisement</div>
+            <ins class="adsbygoogle responsive-ad"
+                 style="display:block"
+                 data-ad-client="ca-pub-8891897633102231"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </div>
+
     <div class="container">
         <div class="stats">
             <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>5+</h3>
-                    <p>Apps Published</p>
-                </div>
-                <div class="stat-item">
-                    <h3>⭐ 4.8</h3>
-                    <p>Average Rating</p>
-                </div>
-                <div class="stat-item">
-                    <h3>177+</h3>
-                    <p>Countries</p>
-                </div>
-                <div class="stat-item">
-                    <h3>10K+</h3>
-                    <p>Downloads</p>
-                </div>
+                <div class="stat-item"><h3>5+</h3><p>Apps Published</p></div>
+                <div class="stat-item"><h3>⭐ 4.8</h3><p>Average Rating</p></div>
+                <div class="stat-item"><h3>177+</h3><p>Countries</p></div>
+                <div class="stat-item"><h3>10K+</h3><p>Downloads</p></div>
             </div>
         </div>
     </div>
 
-    <!-- Featured Products -->
     <section class="section">
         <div class="container">
             <h2 class="section-title">Featured Products</h2>
             <div class="products-grid">
-                
-                <!-- Three Calendars -->
                 <div class="product-card">
                     <div class="product-icon">📅</div>
                     <div class="product-content">
                         <span class="product-badge badge-published">✓ PUBLISHED</span>
                         <h3>Three Calendars</h3>
-                        <p>Ethiopian, Gregorian & Hijri calendar with smart reminders across all three calendar systems.</p>
-                        <div class="product-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">Android</span>
-                            <span class="tech-tag">Web</span>
-                            <span class="tech-tag">AdMob</span>
-                        </div>
+                        <p>Ethiopian, Gregorian & Hijri calendar with smart reminders.</p>
+                        <div class="product-tech"><span class="tech-tag">Flutter</span><span class="tech-tag">Android</span><span class="tech-tag">Web</span></div>
                         <div class="product-links">
                             <a href="https://play.google.com/store/apps/details?id=com.muneassh.ethiopiancalendar" class="product-link product-link-play" target="_blank">📱 Play Store</a>
                             <a href="products/three-calendars/" class="product-link product-link-web">🌐 Learn More</a>
-                            <a href="https://github.com/muneassh/three_calendars" class="product-link product-link-github" target="_blank">💻 GitHub</a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Coming Soon -->
                 <div class="product-card">
                     <div class="product-icon">🚀</div>
                     <div class="product-content">
                         <span class="product-badge badge-soon">🚧 COMING SOON</span>
                         <h3>Next Innovation</h3>
-                        <p>Another amazing app is in development. Stay tuned for updates!</p>
-                        <div class="product-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">Firebase</span>
-                        </div>
-                        <div class="product-links">
-                            <span class="product-link" style="background:#ccc; color:#666;">📱 Coming Soon</span>
-                        </div>
+                        <p>Another amazing app is in development. Stay tuned!</p>
+                        <div class="product-tech"><span class="tech-tag">Flutter</span><span class="tech-tag">Firebase</span></div>
                     </div>
-                </div>
-                
-                <!-- IoT Solution -->
-                <div class="product-card">
-                    <div class="product-icon">🤖</div>
-                    <div class="product-content">
-                        <span class="product-badge badge-soon">🚧 IN DEVELOPMENT</span>
-                        <h3>IoT Solutions</h3>
-                        <p>Smart connected devices and automation solutions for modern living.</p>
-                        <div class="product-tech">
-                            <span class="tech-tag">Arduino</span>
-                            <span class="tech-tag">ESP32</span>
-                            <span class="tech-tag">Flutter</span>
-                        </div>
-                        <div class="product-links">
-                            <span class="product-link" style="background:#ccc; color:#666;">🔧 In Development</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="products/" class="btn btn-outline">View All Products →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Preview -->
-    <section class="section" style="background: #f8f9fa;">
-        <div class="container">
-            <h2 class="section-title">What I Do</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>Mobile App Development</h3>
-                    <p>Native and cross-platform apps for Android, iOS, and Web using Flutter.</p>
-                    <ul class="service-features">
-                        <li>Flutter Development</li>
-                        <li>Android Native (Kotlin)</li>
-                        <li>UI/UX Design</li>
-                        <li>App Store Publishing</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🤖</div>
-                    <h3>IoT Solutions</h3>
-                    <p>Smart connected devices and automation systems.</p>
-                    <ul class="service-features">
-                        <li>Arduino Programming</li>
-                        <li>ESP32/ESP8266</li>
-                        <li>Sensor Integration</li>
-                        <li>Cloud Connectivity</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>Web Development</h3>
-                    <p>Responsive websites and progressive web apps.</p>
-                    <ul class="service-features">
-                        <li>HTML/CSS/JavaScript</li>
-                        <li>Flutter Web</li>
-                        <li>Responsive Design</li>
-                        <li>SEO Optimization</li>
-                    </ul>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="services/" class="btn btn-primary">View All Services →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Preview -->
-    <section class="section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <p>I'm Ahmed Suhaba, a passionate app developer based in Addis Ababa, Ethiopia. I specialize in creating high-quality mobile applications using Flutter and developing IoT solutions that solve real-world problems.</p>
-                    <p>With expertise in both mobile and IoT technologies, I help businesses and individuals turn their ideas into powerful, scalable applications that users love.</p>
-                    <div class="skills">
-                        <span class="skill">Flutter</span>
-                        <span class="skill">Dart</span>
-                        <span class="skill">Kotlin</span>
-                        <span class="skill">Firebase</span>
-                        <span class="skill">Arduino</span>
-                        <span class="skill">ESP32</span>
-                        <span class="skill">REST APIs</span>
-                        <span class="skill">Git/GitHub</span>
-                    </div>
-                    <a href="about.html" class="btn btn-outline" style="margin-top: 30px;">Learn More →</a>
-                </div>
-                <div class="about-image">
-                    <img src="assets/images/developer-illustration.svg" alt="Developer Illustration" onerror="this.src='https://via.placeholder.com/400x400?text=Muneassh'">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Muneassh App Developer</h3>
-                    <p>Turning Ideas into Powerful Apps</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <a href="index.html">Home</a>
-                    <a href="products/">Products</a>
-                    <a href="services/">Services</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-contact">
-                    <h4>Connect</h4>
-                    <a href="https://github.com/muneassh" target="_blank">GitHub</a>
-                    <a href="mailto:ahmedsuhaba@gmail.com">Email</a>
-                    <div class="social-links">
-                        <a href="https://github.com/muneassh" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/muneassh" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://twitter.com/muneassh" target="_blank"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
+                <div class="footer-info"><h3>Muneassh App Developer</h3><p>Turning Ideas into Powerful Apps</p></div>
+                <div class="footer-links"><h4>Quick Links</h4><a href="index.html">Home</a><a href="products/">Products</a><a href="services/">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+                <div class="footer-contact"><h4>Connect</h4><a href="https://github.com/muneassh">GitHub</a><a href="mailto:ahmedsuhaba@gmail.com">Email</a></div>
             </div>
-            <div class="copyright">
-                <p>© 2026 Muneassh App Developer | Addis Ababa, Ethiopia</p>
-                <p style="font-size: 12px; margin-top: 10px;">Built with Flutter | Available on Android & Web</p>
-            </div>
+            <div class="copyright"><p>© 2026 Muneassh App Developer | Addis Ababa, Ethiopia</p></div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>
