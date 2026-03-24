@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Three Calendars - Ethiopian, Gregorian & Hijri Calendar | Muneassh</title>
+    <meta name="description" content="Complete calendar app with Ethiopian (Amharic), Gregorian (English), and Hijri (Arabic) calendars. Smart reminders across all three calendar systems. Download now on Google Play.">
+    <meta name="keywords" content="ethiopian calendar, hijri calendar, gregorian calendar, ethiopian date today, hijri date today, islamic calendar, ethiopian months, muslim calendar, calendar converter, date converter, reminders, ethiopian calendar app, hijri calendar app">
+    <meta name="author" content="Ahmed Suhaba">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Three Calendars - Ethiopian, Gregorian & Hijri Calendar">
+    <meta property="og:description" content="The ultimate calendar app combining Ethiopian, Gregorian and Hijri calendars. Set reminders, get notifications, and never miss important dates.">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://muneassh.github.io/products/three-calendars/">
+    <meta property="og:image" content="https://muneassh.github.io/assets/images/three-calendars-og.png">
+    <meta property="og:site_name" content="Muneassh App Developer">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Three Calendars - Ethiopian, Gregorian & Hijri Calendar">
+    <meta name="twitter:description" content="Three calendar systems in one beautiful app with smart reminders and widgets.">
+    <meta name="twitter:image" content="https://muneassh.github.io/assets/images/three-calendars-twitter.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://muneassh.github.io/products/three-calendars/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    
+    <style>
+        /* Product Page Specific Styles */
+        .product-hero {
+            background: linear-gradient(135deg, #43A047 0%, #1E88E5 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        .product-hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .product-hero .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .product-hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+            animation: fadeInUp 0.6s ease-out 0.1s both;
+        }
+        
+        .rating {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+        
+        .rating-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 20px;
+            border-radius: 40px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .rating-item i {
+            color: #FFD700;
+        }
+        
+        .product-details {
+            padding: 80px 0;
+        }
+        
+        .product-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .info-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #43A047, #1E88E5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 16px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list li i {
+            color: #43A047;
+            font-size: 24px;
+            margin-top: 2px;
+        }
+        
+        .feature-list li strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        
+        .feature-list li span {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .download-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            padding: 40px;
+            border-radius: 24px;
+            text-align: center;
+        }
+        
+        .download-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+        
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-download i {
+            font-size: 24px;
+        }
+        
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .btn-play {
+            background: #34A853;
+            color: white;
+        }
+        
+        .btn-web {
+            background: #4285F4;
+            color: white;
+        }
+        
+        .btn-github {
+            background: #333;
+            color: white;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .tech-badge {
+            background: white;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #43A047;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .features-showcase {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .screenshots-section {
+            padding: 80px 0;
+        }
+        
+        .screenshots-grid {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 0;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .screenshot {
+            width: 220px;
+            background: #f0f0f0;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .screenshot:hover {
+            transform: translateY(-5px);
+        }
+        
+        .screenshot-img {
+            height: 400px;
+            background: linear-gradient(135deg, #43A047, #1E88E5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+        }
+        
+        .screenshot-caption {
+            padding: 12px;
+            text-align: center;
+            background: white;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .faq-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px 25px;
+            font-weight: 600;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            transition: background 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: #f9f9f9;
+        }
+        
+        .faq-question i {
+            color: #43A047;
+            transition: transform 0.3s;
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 25px 20px 25px;
+            max-height: 200px;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #43A047, #1E88E5);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-top: 40px;
+            border-radius: 40px;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .btn-cta {
+            background: white;
+            color: #43A047;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .product-hero h1 { font-size: 36px; }
+            .product-hero p { font-size: 18px; }
+            .product-info-grid { grid-template-columns: 1fr; gap: 40px; }
+            .screenshot { width: 180px; }
+            .screenshot-img { height: 320px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="../../index.html">Muneassh<span style="color: var(--primary);">.</span>Dev</a>
+                </div>
+                <div class="nav-links">
+                    <a href="../../index.html">Home</a>
+                    <a href="../index.html" class="active">Products</a>
+                    <a href="../../services/">Services</a>
+                    <a href="../../about.html">About</a>
+                    <a href="../../contact.html">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Product Hero Section -->
+    <section class="product-hero">
+        <div class="container">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i> Featured App
+            </div>
+            <h1>Three Calendars</h1>
+            <p>Ethiopian | Gregorian | Hijri Calendar with Smart Reminders</p>
+            <div class="rating">
+                <div class="rating-item">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.8/5</span>
+                </div>
+                <div class="rating-item">
+                    <i class="fas fa-download"></i>
+                    <span>10K+ Downloads</span>
+                </div>
+                <div class="rating-item">
+                    <i class="fas fa-globe"></i>
+                    <span>177 Countries</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Section -->
+    <section class="product-details">
+        <div class="container">
+            <div class="product-info-grid">
+                <div class="info-section">
+                    <h2>About the App</h2>
+                    <p style="font-size: 18px; color: #555; line-height: 1.8; margin-bottom: 25px;">
+                        Three Calendars is the ultimate calendar app that brings together <strong>Ethiopian (Amharic)</strong>, 
+                        <strong>Gregorian (English)</strong>, and <strong>Hijri (Arabic)</strong> calendars in one beautiful interface. 
+                        Perfect for anyone who needs to track dates across multiple calendar systems.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Three Calendar Systems</strong>
+                                <span>Ethiopian (Amharic), Gregorian (English), and Hijri (Arabic) calendars with full month names and special events.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Smart Reminders</strong>
+                                <span>Create reminders that work across all three calendar systems. Never miss important dates again.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Home Screen Widget</strong>
+                                <span>Quick view of all three calendar dates directly from your home screen without opening the app.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Circular Clock Interface</strong>
+                                <span>Beautiful and intuitive circular interface for easy date selection and navigation.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Special Events</strong>
+                                <span>Built-in Ethiopian and Hijri special events with recommendations and notifications.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="info-section">
+                    <div class="download-section">
+                        <i class="fas fa-download" style="font-size: 48px; color: #43A047;"></i>
+                        <h3 style="margin: 20px 0 10px;">Download Now</h3>
+                        <p style="color: #666;">Available on Android and Web</p>
+                        <div class="download-buttons">
+                            <a href="https://play.google.com/store/apps/details?id=com.muneassh.ethiopiancalendar" class="btn-download btn-play" target="_blank">
+                                <i class="fab fa-google-play"></i>
+                                Google Play
+                            </a>
+                            <a href="demo/" class="btn-download btn-web">
+                                <i class="fas fa-globe"></i>
+                                Web Demo
+                            </a>
+                            <a href="https://github.com/muneassh/three_calendars" class="btn-download btn-github" target="_blank">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Flutter</span>
+                            <span class="tech-badge">Dart</span>
+                            <span class="tech-badge">AdMob</span>
+                            <span class="tech-badge">SharedPreferences</span>
+                            <span class="tech-badge">Hijri Library</span>
+                            <span class="tech-badge">Abushakir</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <h3>Latest Update</h3>
+                        <p style="color: #666;">Version 1.0.2 (March 2026)</p>
+                        <ul style="margin-top: 15px; color: #666;">
+                            <li>✓ Initial release on Google Play</li>
+                            <li>✓ Full support for Ethiopian, Gregorian, and Hijri calendars</li>
+                            <li>✓ Smart reminders with notifications</li>
+                            <li>✓ Home screen widget</li>
+                            <li>✓ Special events highlighting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Showcase -->
+    <section class="features-showcase">
+        <div class="container">
+            <h2 style="text-align: center;">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Three Calendars in One</h3>
+                    <p>Ethiopian (Amharic), Gregorian (English), and Hijri (Arabic) calendars displayed simultaneously.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Circular Clock Interface</h3>
+                    <p>Beautiful interactive dial for easy month and day selection with smooth animations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Smart Reminders</h3>
+                    <p>Create reminders that work across all calendar systems with customizable notifications.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Home Screen Widget</h3>
+                    <p>Quick view of all three calendars from your home screen without opening the app.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Multi-Language Support</h3>
+                    <p>Interface adapts based on selected calendar: Amharic, English, or Arabic.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Offline First</h3>
+                    <p>Works completely offline - all data stored locally on your device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots-section">
+        <div class="container">
+            <h2 style="text-align: center;">Screenshots</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot">
+                    <div class="screenshot-img">📅</div>
+                    <div class="screenshot-caption">Main Calendar View</div>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-img">🔔</div>
+                    <div class="screenshot-caption">Reminder Dialog</div>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-img">📱</div>
+                    <div class="screenshot-caption">Widget View</div>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-img">🎯</div>
+                    <div class="screenshot-caption">Date Selection</div>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-img">📅</div>
+                    <div class="screenshot-caption">Calendar Switching</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 style="text-align: center;">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is today's Ethiopian date?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        The app automatically shows today's Ethiopian date in Amharic, including the month (Meskerem to Pagume) and year. You can view it instantly when opening the app.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How to convert Gregorian to Hijri date?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Simply select any date in Gregorian calendar and the app will instantly show the equivalent Hijri date. The circular clock interface makes it easy to navigate through dates.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do reminders work across all calendars?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! When you create a reminder, it automatically works across all three calendar systems. You'll receive notifications regardless of which calendar you're viewing.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is the app free?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, the app is completely free to download and use. It includes ads to support continued development, but all features are available without payment.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Does it work offline?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! The app works completely offline. All data, including reminders and calendar calculations, are stored locally on your device.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container">
+        <div class="cta-section">
+            <h2>Ready to experience Three Calendars?</h2>
+            <p>Join thousands of users who already use Three Calendars daily</p>
+            <a href="https://play.google.com/store/apps/details?id=com.muneassh.ethiopiancalendar" class="btn-cta" target="_blank">
+                <i class="fab fa-google-play"></i> Download on Google Play
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Muneassh App Developer</h3>
+                    <p>Turning Ideas into Powerful Apps</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="../../index.html">Home</a>
+                    <a href="../index.html">Products</a>
+                    <a href="../../services/">Services</a>
+                    <a href="../../about.html">About</a>
+                    <a href="../../contact.html">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Connect</h4>
+                    <a href="https://github.com/muneassh" target="_blank">GitHub</a>
+                    <a href="mailto:ahmedsuhaba@gmail.com">Email</a>
+                    <div class="social-links">
+                        <a href="https://github.com/muneassh" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/muneassh" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/muneassh" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 Muneassh App Developer | Addis Ababa, Ethiopia</p>
+                <p style="font-size: 12px; margin-top: 10px;">Three Calendars - Ethiopian, Gregorian & Hijri Calendar</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
