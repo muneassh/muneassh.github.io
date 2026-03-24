@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Muneassh App Developer</title>
+    <meta name="description" content="Professional app development services including Flutter mobile apps, IoT solutions, web development, and consulting.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -16,7 +17,6 @@
         }
         .services-hero h1 { font-size: 48px; margin-bottom: 20px; }
         .service-detail { margin-bottom: 40px; background: white; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); }
-        .service-detail:nth-child(even) .service-detail-content { flex-direction: row-reverse; }
         .service-detail-content { display: flex; align-items: center; gap: 40px; padding: 40px; }
         .service-detail-text { flex: 1; }
         .service-detail-icon { flex: 0.5; text-align: center; font-size: 80px; }
@@ -24,6 +24,7 @@
         .btn-hire { background: var(--primary); color: white; padding: 12px 30px; border-radius: 30px; text-decoration: none; display: inline-block; margin-top: 20px; }
         @media (max-width: 768px) {
             .service-detail-content { flex-direction: column !important; text-align: center; }
+            .service-detail-icon { order: -1; }
         }
     </style>
 </head>
